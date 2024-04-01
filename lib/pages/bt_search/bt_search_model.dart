@@ -1,12 +1,12 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'splash_page_widget.dart' show SplashPageWidget;
+import 'bt_search_widget.dart' show BtSearchWidget;
 import 'package:flutter/material.dart';
 
-class SplashPageModel extends FlutterFlowModel<SplashPageWidget> {
+class BtSearchModel extends FlutterFlowModel<BtSearchWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // Stores action output result for [Custom Action - isBluetoothEnabled] action in SplashPage widget.
+  // Stores action output result for [Custom Action - isBluetoothEnabled] action in BtSearch widget.
   bool? bluetoothEnabled;
 
   @override

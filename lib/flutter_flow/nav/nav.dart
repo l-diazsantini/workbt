@@ -31,17 +31,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => const SplashPageWidget(),
+      errorBuilder: (context, state) => const BtSearchWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => const SplashPageWidget(),
+          builder: (context, _) => const BtSearchWidget(),
         ),
         FFRoute(
-          name: 'HomePage',
-          path: '/homePage',
-          builder: (context, params) => HomePageWidget(
+          name: 'DeviceList',
+          path: '/deviceList',
+          builder: (context, params) => DeviceListWidget(
             isBTEnabled: params.getParam(
               'isBTEnabled',
               ParamType.bool,
@@ -49,9 +49,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'SplashPage',
-          path: '/splashPage',
-          builder: (context, params) => const SplashPageWidget(),
+          name: 'BtSearch',
+          path: '/btSearch',
+          builder: (context, params) => const BtSearchWidget(),
         ),
         FFRoute(
           name: 'DevicePage',

@@ -8,11 +8,11 @@ import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'home_page_model.dart';
-export 'home_page_model.dart';
+import 'device_list_model.dart';
+export 'device_list_model.dart';
 
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({
+class DeviceListWidget extends StatefulWidget {
+  const DeviceListWidget({
     super.key,
     bool? isBTEnabled,
   }) : isBTEnabled = isBTEnabled ?? false;
@@ -20,12 +20,12 @@ class HomePageWidget extends StatefulWidget {
   final bool isBTEnabled;
 
   @override
-  State<HomePageWidget> createState() => _HomePageWidgetState();
+  State<DeviceListWidget> createState() => _DeviceListWidgetState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget>
+class _DeviceListWidgetState extends State<DeviceListWidget>
     with TickerProviderStateMixin {
-  late HomePageModel _model;
+  late DeviceListModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -63,7 +63,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => HomePageModel());
+    _model = createModel(context, () => DeviceListModel());
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {

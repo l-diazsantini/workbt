@@ -4,25 +4,25 @@ import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/permissions_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'splash_page_model.dart';
-export 'splash_page_model.dart';
+import 'bt_search_model.dart';
+export 'bt_search_model.dart';
 
-class SplashPageWidget extends StatefulWidget {
-  const SplashPageWidget({super.key});
+class BtSearchWidget extends StatefulWidget {
+  const BtSearchWidget({super.key});
 
   @override
-  State<SplashPageWidget> createState() => _SplashPageWidgetState();
+  State<BtSearchWidget> createState() => _BtSearchWidgetState();
 }
 
-class _SplashPageWidgetState extends State<SplashPageWidget> {
-  late SplashPageModel _model;
+class _BtSearchWidgetState extends State<BtSearchWidget> {
+  late BtSearchModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => SplashPageModel());
+    _model = createModel(context, () => BtSearchModel());
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
@@ -32,7 +32,7 @@ class _SplashPageWidgetState extends State<SplashPageWidget> {
         context.pop();
       }
       context.pushNamed(
-        'HomePage',
+        'DeviceList',
         queryParameters: {
           'isBTEnabled': serializeParam(
             _model.bluetoothEnabled,

@@ -1,9 +1,9 @@
 import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'home_page_widget.dart' show HomePageWidget;
+import 'device_list_widget.dart' show DeviceListWidget;
 import 'package:flutter/material.dart';
 
-class HomePageModel extends FlutterFlowModel<HomePageWidget> {
+class DeviceListModel extends FlutterFlowModel<DeviceListWidget> {
   ///  Local state fields for this page.
 
   bool isFetchingDevices = false;
@@ -37,9 +37,9 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // Stores action output result for [Custom Action - getConnectedDevices] action in HomePage widget.
+  // Stores action output result for [Custom Action - getConnectedDevices] action in DeviceList widget.
   List<BTDeviceStruct>? fetchedConnectedDevices;
-  // Stores action output result for [Custom Action - findDevices] action in HomePage widget.
+  // Stores action output result for [Custom Action - findDevices] action in DeviceList widget.
   List<BTDeviceStruct>? fetchedDevices;
   // State field(s) for Switch widget.
   bool? switchValue;
