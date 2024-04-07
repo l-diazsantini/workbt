@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 
 Future<bool> isBluetoothEnabled() async {
+  //checking if bluetooth is turned on on the device
   await FlutterBluePlus.instance.isOn;
   await Future.delayed(Duration(milliseconds: 100));
   final state = await FlutterBluePlus.instance.state.first;

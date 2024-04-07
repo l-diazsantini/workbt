@@ -10,8 +10,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 
 Future<List<BTDeviceStruct>> findDevices() async {
+  //initializing bluetooth instance
   final flutterBlue = FlutterBluePlus.instance;
+  //creating list to hold all found devices
   List<BTDeviceStruct> devices = [];
+  //listening for scan results and checking them to add to scanned device list
   flutterBlue.scanResults.listen((results) {
     List<ScanResult> scannedDevices = [];
     for (ScanResult r in results) {
@@ -19,8 +22,10 @@ Future<List<BTDeviceStruct>> findDevices() async {
         scannedDevices.add(r);
       }
     }
+    //sorting scanned devices based on signal strength
     scannedDevices.sort((a, b) => b.rssi.compareTo(a.rssi));
     devices.clear();
+    //going through all scanned and checked devices and converting them into BTDeviceStruct objects and putting them into the device list
     scannedDevices.forEach((deviceResult) {
       devices.add(BTDeviceStruct(
         name: deviceResult.device.name,
@@ -29,6 +34,7 @@ Future<List<BTDeviceStruct>> findDevices() async {
       ));
     });
   });
+  //checking if currently scanning, if not then start scanning
   final isScanning = flutterBlue.isScanningNow;
   if (!isScanning) {
     await flutterBlue.startScan(
@@ -36,5 +42,6 @@ Future<List<BTDeviceStruct>> findDevices() async {
     );
   }
 
+  //returning scanned device list
   return devices;
 }

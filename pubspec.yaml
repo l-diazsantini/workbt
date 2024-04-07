@@ -28,6 +28,7 @@ dependencies:
   auto_size_text: 3.0.0
   cached_network_image: 3.3.1
   collection: 1.18.0
+  fl_chart: 0.55.0
   flutter_animate: 4.1.1+1
   flutter_blue_plus: 1.7.5
   flutter_cache_manager: 3.3.1
@@ -93,6 +94,10 @@ flutter:
     - assets/lottie_animations/
     - assets/rive_animations/
     - assets/pdfs/
+  fonts:
+    - family: MMIcons
+      fonts:
+        - asset: assets/fonts/MM-icons.ttf
 
   
   # An image asset can refer to one or more resolution-specific "variants", see

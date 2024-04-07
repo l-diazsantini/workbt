@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'strength_indicator_widget.dart' show StrengthIndicatorWidget;
+import 'signal_indicator_widget.dart' show SignalIndicatorWidget;
 import 'package:flutter/material.dart';
 
-class StrengthIndicatorModel extends FlutterFlowModel<StrengthIndicatorWidget> {
+class SignalIndicatorModel extends FlutterFlowModel<SignalIndicatorWidget> {
   @override
   void initState(BuildContext context) {}
 

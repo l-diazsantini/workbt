@@ -1,10 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/instant_timer.dart';
-import 'display_received_data_widget.dart' show DisplayReceivedDataWidget;
+import 'display_rec_mesg_widget.dart' show DisplayRecMesgWidget;
 import 'package:flutter/material.dart';
 
-class DisplayReceivedDataModel
-    extends FlutterFlowModel<DisplayReceivedDataWidget> {
+class DisplayRecMesgModel extends FlutterFlowModel<DisplayRecMesgWidget> {
   ///  Local state fields for this component.
 
   String? data;
@@ -12,7 +11,7 @@ class DisplayReceivedDataModel
   ///  State fields for stateful widgets in this component.
 
   InstantTimer? receivedDataTimer;
-  // Stores action output result for [Custom Action - receiveData] action in DisplayReceivedData widget.
+  // Stores action output result for [Custom Action - receiveData] action in DisplayRecMesg widget.
   String? receivedData;
 
   @override

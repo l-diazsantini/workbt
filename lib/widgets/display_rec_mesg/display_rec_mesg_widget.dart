@@ -5,11 +5,11 @@ import '/flutter_flow/instant_timer.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'display_received_data_model.dart';
-export 'display_received_data_model.dart';
+import 'display_rec_mesg_model.dart';
+export 'display_rec_mesg_model.dart';
 
-class DisplayReceivedDataWidget extends StatefulWidget {
-  const DisplayReceivedDataWidget({
+class DisplayRecMesgWidget extends StatefulWidget {
+  const DisplayRecMesgWidget({
     super.key,
     this.device,
   });
@@ -17,12 +17,11 @@ class DisplayReceivedDataWidget extends StatefulWidget {
   final BTDeviceStruct? device;
 
   @override
-  State<DisplayReceivedDataWidget> createState() =>
-      _DisplayReceivedDataWidgetState();
+  State<DisplayRecMesgWidget> createState() => _DisplayRecMesgWidgetState();
 }
 
-class _DisplayReceivedDataWidgetState extends State<DisplayReceivedDataWidget> {
-  late DisplayReceivedDataModel _model;
+class _DisplayRecMesgWidgetState extends State<DisplayRecMesgWidget> {
+  late DisplayRecMesgModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -33,7 +32,7 @@ class _DisplayReceivedDataWidgetState extends State<DisplayReceivedDataWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => DisplayReceivedDataModel());
+    _model = createModel(context, () => DisplayRecMesgModel());
 
     // On component load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {

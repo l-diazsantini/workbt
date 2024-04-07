@@ -54,9 +54,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const BtSearchWidget(),
         ),
         FFRoute(
-          name: 'DevicePage',
-          path: '/devicePage',
-          builder: (context, params) => DevicePageWidget(
+          name: 'DemoPage',
+          path: '/demoPage',
+          builder: (context, params) => DemoPageWidget(
             deviceName: params.getParam(
               'deviceName',
               ParamType.String,
@@ -74,6 +74,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.bool,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'MainMenu',
+          path: '/mainMenu',
+          builder: (context, params) => const MainMenuWidget(),
+        ),
+        FFRoute(
+          name: 'Oscilloscope',
+          path: '/oscilloscope',
+          builder: (context, params) => const OscilloscopeWidget(),
+        ),
+        FFRoute(
+          name: 'Multimeter',
+          path: '/multimeter',
+          builder: (context, params) => const MultimeterWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

@@ -3,7 +3,7 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/widgets/empty_devices/empty_devices_widget.dart';
-import '/widgets/strength_indicator/strength_indicator_widget.dart';
+import '/widgets/signal_indicator/signal_indicator_widget.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -115,6 +115,7 @@ class _DeviceListWidgetState extends State<DeviceListWidget>
             style: FlutterFlowTheme.of(context).titleLarge.override(
                   fontFamily: 'Montserrat',
                   letterSpacing: 0.0,
+                  fontWeight: FontWeight.w600,
                 ),
           ),
           actions: const [],
@@ -258,7 +259,7 @@ class _DeviceListWidgetState extends State<DeviceListWidget>
                                                         Colors.transparent,
                                                     onTap: () async {
                                                       context.pushNamed(
-                                                        'DevicePage',
+                                                        'DemoPage',
                                                         queryParameters: {
                                                           'deviceName':
                                                               serializeParam(
@@ -352,7 +353,7 @@ class _DeviceListWidgetState extends State<DeviceListWidget>
                                                                             ),
                                                                       ),
                                                                     ),
-                                                                    StrengthIndicatorWidget(
+                                                                    SignalIndicatorWidget(
                                                                       key: Key(
                                                                           'Keywn3_${displayConnectedDevciesIndex}_of_${displayConnectedDevcies.length}'),
                                                                       rssi: displayConnectedDevciesItem
@@ -578,7 +579,7 @@ class _DeviceListWidgetState extends State<DeviceListWidget>
                                                         });
 
                                                         context.pushNamed(
-                                                          'DevicePage',
+                                                          'DemoPage',
                                                           queryParameters: {
                                                             'deviceName':
                                                                 serializeParam(
@@ -676,7 +677,7 @@ class _DeviceListWidgetState extends State<DeviceListWidget>
                                                                               ),
                                                                         ),
                                                                       ),
-                                                                      StrengthIndicatorWidget(
+                                                                      SignalIndicatorWidget(
                                                                         key: Key(
                                                                             'Keybdj_${displayDevicesIndex}_of_${displayDevices.length}'),
                                                                         rssi: displayDevicesItem

@@ -3,16 +3,16 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/instant_timer.dart';
-import '/widgets/display_received_data/display_received_data_widget.dart';
-import '/widgets/strength_indicator/strength_indicator_widget.dart';
+import '/widgets/display_rec_mesg/display_rec_mesg_widget.dart';
+import '/widgets/signal_indicator/signal_indicator_widget.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'device_page_model.dart';
-export 'device_page_model.dart';
+import 'demo_page_model.dart';
+export 'demo_page_model.dart';
 
-class DevicePageWidget extends StatefulWidget {
-  const DevicePageWidget({
+class DemoPageWidget extends StatefulWidget {
+  const DemoPageWidget({
     super.key,
     required this.deviceName,
     required this.deviceId,
@@ -26,18 +26,18 @@ class DevicePageWidget extends StatefulWidget {
   final bool? hasWriteCharacteristic;
 
   @override
-  State<DevicePageWidget> createState() => _DevicePageWidgetState();
+  State<DemoPageWidget> createState() => _DemoPageWidgetState();
 }
 
-class _DevicePageWidgetState extends State<DevicePageWidget> {
-  late DevicePageModel _model;
+class _DemoPageWidgetState extends State<DemoPageWidget> {
+  late DemoPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => DevicePageModel());
+    _model = createModel(context, () => DemoPageModel());
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
@@ -104,14 +104,15 @@ class _DevicePageWidgetState extends State<DevicePageWidget> {
                             fontFamily: 'Montserrat',
                             fontSize: 18.0,
                             letterSpacing: 0.0,
+                            fontWeight: FontWeight.w600,
                           ),
                     ),
                   ),
                   if (_model.currentRssi != null)
                     wrapWithModel(
-                      model: _model.strengthIndicatorModel,
+                      model: _model.signalIndicatorModel,
                       updateCallback: () => setState(() {}),
-                      child: StrengthIndicatorWidget(
+                      child: SignalIndicatorWidget(
                         rssi: _model.currentRssi!,
                         color: valueOrDefault<Color>(
                           () {
@@ -309,9 +310,9 @@ class _DevicePageWidgetState extends State<DevicePageWidget> {
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
                   child: wrapWithModel(
-                    model: _model.displayReceivedDataModel,
+                    model: _model.displayRecMesgModel,
                     updateCallback: () => setState(() {}),
-                    child: DisplayReceivedDataWidget(
+                    child: DisplayRecMesgWidget(
                       device: BTDeviceStruct(
                         name: widget.deviceName,
                         id: widget.deviceId,

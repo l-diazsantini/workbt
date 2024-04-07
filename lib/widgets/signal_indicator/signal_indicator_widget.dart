@@ -1,11 +1,11 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'strength_indicator_model.dart';
-export 'strength_indicator_model.dart';
+import 'signal_indicator_model.dart';
+export 'signal_indicator_model.dart';
 
-class StrengthIndicatorWidget extends StatefulWidget {
-  const StrengthIndicatorWidget({
+class SignalIndicatorWidget extends StatefulWidget {
+  const SignalIndicatorWidget({
     super.key,
     required this.rssi,
     Color? color,
@@ -15,12 +15,11 @@ class StrengthIndicatorWidget extends StatefulWidget {
   final Color color;
 
   @override
-  State<StrengthIndicatorWidget> createState() =>
-      _StrengthIndicatorWidgetState();
+  State<SignalIndicatorWidget> createState() => _SignalIndicatorWidgetState();
 }
 
-class _StrengthIndicatorWidgetState extends State<StrengthIndicatorWidget> {
-  late StrengthIndicatorModel _model;
+class _SignalIndicatorWidgetState extends State<SignalIndicatorWidget> {
+  late SignalIndicatorModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -31,7 +30,7 @@ class _StrengthIndicatorWidgetState extends State<StrengthIndicatorWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => StrengthIndicatorModel());
+    _model = createModel(context, () => SignalIndicatorModel());
   }
 
   @override

@@ -67,6 +67,7 @@ class _BtSearchWidgetState extends State<BtSearchWidget> {
             style: FlutterFlowTheme.of(context).titleLarge.override(
                   fontFamily: 'Montserrat',
                   letterSpacing: 0.0,
+                  fontWeight: FontWeight.w600,
                 ),
           ),
           actions: const [],
