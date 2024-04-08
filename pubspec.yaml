@@ -98,6 +98,9 @@ flutter:
     - family: MMIcons
       fonts:
         - asset: assets/fonts/MM-icons.ttf
+    - family: Wavegen
+      fonts:
+        - asset: assets/fonts/wavegen.ttf
 
   
   # An image asset can refer to one or more resolution-specific "variants", see
